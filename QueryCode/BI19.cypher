@@ -26,6 +26,7 @@ LIMIT 100
 //Estrategia de optimización
 // Materializacion
 MATCH (message:Message)-[:REPLY_OF*]->(post:Message) CREATE (message)-[:BI19_message]->(post)
+MATCH (tagclass:TagClass)<-[:HAS_TYPE]-(tag:Tag) CREATE (tag)-[:BI_forum_tagclass]->(tagclass
 
 
 //Consulta modificada
